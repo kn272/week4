@@ -22,14 +22,14 @@
      echo "Oops<br>";
   }
 
-  /*
+ 
   echo "The value of \$date: ".$date."<br>";
   echo "Finding positions of '/' in date<br>pos:";
   $pos = 0;
-  while($pos !== false) {
-     $pos = strpos($date,"/",$pos);
+  while($pos > -1) {
+     $pos = strpos($date,"/",$pos+1);
      echo " ".$pos." ";
-  }*/
+  }
 
   echo "<br>No. of words in ".$date." is: ".str_word_count($date,0)."<br>";
 
