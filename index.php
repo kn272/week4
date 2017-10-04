@@ -43,7 +43,10 @@
 
   echo "last 2 charecters of DATE are: ".substr($date,-2)."<br>";
   
-  //converting string to array is remaining//
+  echo "After breaking DATE into an array using '/' as
+  seperator: <br>";
+  print_r(explode("/",$date));
+  echo "<br>";
 
   foreach ($year as $value) {
       switch(($value%4!=0)||(($value%100==0)&&($value%400!=0))) {
