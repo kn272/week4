@@ -34,11 +34,25 @@
   echo "<br>No. of words in ".$date." is: ".str_word_count($date,0)."<br>";
 
   $sampleText = "This is the sample text for strlen<br>";
-  echo "$sampleText"."<br>";
+
+  echo "$sampleText";
   echo "The length of sampletext is".strlen($sampleText)."<br>";
+  
+  $ascii = ord($sampleText);
+  echo "The ascii value of 1st charecter of sampleText is: ".$ascii."<br>";
 
+  echo "last 2 charecters of DATE are: ".substr($date,-2)."<br>";
+  
+  //converting string to array is remaining//
 
-
+  foreach ($year as $value) {
+      switch(($value%4!=0)||(($value%100==0)&&($value%400!=0))) {
+         case 1:echo "$value is not a leap year  ";
+	        break;
+	 case 0:echo "$value is a leap year  ";
+	        break;
+      }
+  }
 
 ?>
 
